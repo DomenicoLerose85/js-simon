@@ -29,9 +29,22 @@ startBtn.addEventListener('click', startGame);
 
 // funzione per generare i numeri random da 1 a 100
 function numberGeneration() {
-    const randomNumbers = numberGeneration[Math.floor(Math.random() * 100)];
-    console.log(randomNumbers);
-    return randomNumbers;
+    for (i = 1; i <= 5; i++) {
+        const randomNumbers = generatorRandomNumber(1, 100);
+        console.log(randomNumbers);
+        machineSequence.push(randomNumbers);
+    }
+    
+}
+numberGeneration();
+console.log(machineSequence);
+
+// countdown di 30 secondi
+
+const timer = setInterval(myFunction, 5000);
+
+function myFunction(){
+    prompt('Inserisci i numeri precedentemente visualizzati sullo schermo');
 }
 
-document.writeln 
+// clearInterval(timer);
